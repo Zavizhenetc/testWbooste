@@ -1,0 +1,18 @@
+@import url('./_disabled/button_disabled.css');
+
+.button {
+  font-weight: normal;
+  font-size: 1.5em;
+  line-height: 22px;
+  cursor: pointer;
+  transition: all 1s ease-out;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  border-radius: 30px;
+  width: 6em;
+  height: 2em;
+  background-color: #6ebbd3;
+  text-align: center;
+  color: #ffff;
+}

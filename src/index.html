@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="Alex Zavizhenetc"/>
+  <title>Wbooste</title>
+  <link rel="icon" href="<%= require('./images/icon_cat.png').default%>"/>
+  <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.css %>"/>
+</head>
+<body class="root">
+<header class="header">
+  <h2> Header</h2>
+</header>
+<section class="main">
+  <div class="card-items ">
+    <template class="template" style="display: none">
+      <div class="card-item">
+        <img class="card-item__img" src="" alt="фото товара ">
+        <div class="card-item__description">
+          <p class="card-item__title">Название товара</p>
+        </div>
+        <p class="card-item__price"></p>
+        <button id="button-card" class="button">Купить</button>
+      </div>
+
+    </template>
+  </div>
+  <!--  popUp-->
+
+  <div class="popup popup__product">
+    <div class="popup__content">
+      <img src="<%=require('./images/close.svg').default%>" alt="закрыть" class="popup__close" />
+      <form class="popup__form" name="editInfo" novalidate>
+        <input id="userName" type="text" name="userName"  minlength="2" maxlength="30"
+               class="popup__input " placeholder="Имя" required/>
+        <span id="userName-error" class="error"></span>
+        <input id="userPhone" type="text" name="userPhone"
+                pattern="\+7(((\(\d{3}\)\s?\d{3}-\d{2}-\d{2})|(\s?\d{3}-\s?\d{3}-\d{2}-\d{2}))|\d{10})|\d{11}"
+               minlength="10" maxlength="14"
+                class="popup__input " placeholder="Телефон " required/>
+        <span id="userPhone-error" class="error"></span>
+        <input id="userEmail" type="text" name="userEmail"
+               pattern="^([\w]+([\-]|[_])?[a-zA-Z0-9])+@[a-zA-Z0-9\-]+[.][a-zA-Z.]{2,}$"
+               placeholder="E-Mail"
+                class="popup__input " required/>
+        <span id="userEmail-error" class="error"></span>
+        <input id="userProduct" type="text" name="userProduct"
+               placeholder="Название товара"  minlength="2" maxlength="32"
+                class="popup__input " required/>
+        <span id="userProduct-error" class="error"></span>
+        <button type="submit" class="button button_popup button_disabled" id="popup-button">
+          Отправить
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <h2>Footer</h2>
+</footer>
+
+<script type="module" src="<%= htmlWebpackPlugin.files.js %>"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+.card-item__description {
+  display: flex;
+  flex-direction: column;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+}
