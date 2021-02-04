@@ -6,7 +6,7 @@ const TEMPLATE = document.querySelector('.template').content;
 const CARD_LIST = document.querySelector('.card-items');
 const POP_UP = document.querySelector('.popup')
 const POP_UP_CLOSE = document.querySelector(".popup__close");
-const URL_API = NODE_ENV === 'production' ? require('./product.json') : '/src/js/constans/product.json';
+const URL_API = NODE_ENV === 'production' ? './product.json' : '/src/js/constans/product.json';
 const FORM = document.querySelector('.popup__form');
 const FORM_BUTTON = document.querySelector('#popup-button');
 const ERROR_MESAGE = {
